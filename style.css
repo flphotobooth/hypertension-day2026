@@ -1,0 +1,173 @@
+body {
+    background: linear-gradient(0deg, rgba(81,50,145,1) 0%, rgba(81,50,145,1) 35%, rgba(218,47,50,1) 80%, rgba(218,47,50,1) 100%);
+}
+
+.hidden-elements {
+    display: none;
+}
+
+.camera-wrapper {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.camera-wrapper canvas {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    border-radius: 0;
+}
+
+.camera-wrapper .camera-actions {
+    position: relative;
+    background: transparent;
+    margin-top: 10px;
+}
+
+.camera-wrapper .camera-actions button {
+    width: 50px;
+    height: 50px;
+    background-color: #f2b249;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: center;
+    margin: 0px 5px;
+}
+
+#btnRefresh::before {
+    content: "Reset";
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    font-size: 16px;
+    background-color: gray;
+    border-radius: 10px;
+    padding-top: 8px;
+    color: white;
+    top: 110%;
+    left: -20px;
+    margin: auto;
+    display: none;
+}
+
+#btnRefresh:hover::before {
+    display: block;
+}
+
+#btnUpload img {
+    transform: rotate(180deg);
+}
+
+
+#btnUpload::before {
+    content: "Upload";
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    font-size: 16px;
+    background-color: gray;
+    border-radius: 10px;
+    padding-top: 8px;
+    color: white;
+    top: 110%;
+    left: 110px;
+    margin: auto;
+    display: none;
+}
+
+#btnUpload:hover::before {
+    display: block;
+}
+
+#btnFlip::before {
+    content: "Rotate";
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    font-size: 16px;
+    background-color: gray;
+    border-radius: 10px;
+    padding-top: 8px;
+    color: white;
+    top: 110%;
+    left: 45px;
+    margin: auto;
+    display: none;
+}
+
+#btnFlip:hover::before {
+    display: block;
+}
+
+#btnSnapshot::before {
+    content: "Capture";
+    position: absolute;
+    width: 120px;
+    height: 25px;
+    font-size: 16px;
+    background-color: gray;
+    border-radius: 10px;
+    padding-top: 8px;
+    color: white;
+    top: 110%;
+    left: 160px;
+    margin: auto;
+    display: none;
+}
+
+#btnSnapshot:hover::before {
+    display: block;
+}
+
+#btnSave {
+    display: none;
+    animation-name: bubble;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+#btnSave::before {
+    content: "Send and download";
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    background-color: gray;
+    border-radius: 10px;
+    padding-top: 8px;
+    color: white;
+    top: 110%;
+    left: -35px;
+    margin: auto;
+    display: none;
+}
+
+#btnSave:hover::before {
+    display: block;
+}
+
+
+#success-msg {
+    margin-top: 25px;
+    font-family: "Roboto Condensed";
+    font-size: 25px;
+    display: none;
+    color: #fff;
+}
+
+@keyframes bubble {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}

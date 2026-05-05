@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>MERCK - HIPERTENSION DAY</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="./style.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet"> 
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="./functions.js?v=31" type="text/javascript"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<style type="text/css">
+    input#textoimg{
+        border: 2px solid #0891d3;
+        font-family: 'Roboto Condensed';
+        font-size: 16px;
+        display: none;
+    }
+</style>
+    </head>
+    <body>
+        <div class="hidden-elements">
+            <img src="./assets/Marco Ingles.png" id="cameraframe" />
+            <video id="video" playsinline></video>
+        </div>
+        <div class="camera-wrapper">
+            <canvas id="camerafilter"></canvas>
+            <div id="success-msg">Now you can download and send your picture!</div>
+            <div class="camera-actions" id="camera-actions2">
+                <input type="text" name="textoimg" id="textoimg" size="40" maxlength="40" placeholder="Escribe tu nombre" />
+            </div>    
+            <div class="camera-actions">
+                <button id="btnRefresh"> <img src="./assets/refresh.svg" /> </button>
+                <button id="btnFlip"><img src="./assets/flip.svg" /></button>
+                <button id="btnUpload"> <img src="./assets/download.svg" /> </button>
+                <button id="btnSnapshot"> <img src="./assets/capture.svg" /> </button>
+                <button id="btnSave"><img src="./assets/enviardescargar.svg" /></button>
+            </div>
+        </div>
+        <input type="file" style="display: none" id="upload-image" />
+    </body>
+</html>
